@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    cursor: none; /* Ocultar el cursor nativo */
+}
+
+#game {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+.pumpkin {
+    position: absolute;
+    top: -100px;
+    width: 75px;  /* Ancho de la calabaza */
+    height: 60px; /* Alto de la calabaza */
+    background-image: url('calabaza.png'); /* Imagen de la calabaza */
+    background-size: cover;
+    cursor: none;
+    transition: height 0.2s ease; /* Animación de la altura */
+}
+
+.hidden {
+    display: none;
+}
+
+#game-over, #win {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Estilo para el cursor personalizado */
+#custom-cursor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('mazo.png'); /* URL de la imagen del cursor */
+    background-size: contain;
+    pointer-events: none; /* Evita que interfiera con los clics */
+    transform: translate(-50%, -50%); /* Centrar la imagen respecto al puntero */
+    transition: transform 0.2s; /* Suavizado de la rotación */
+}

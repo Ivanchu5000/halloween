@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Calabaza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Machaca calabazas</h1>
+    <br>
+    <h2>Tu misión es clicar 50 calabazas antes de que estas caigan al fondo de la pantalla. ¡Buena suerte!</h2>
+    <br>
+    <div id="game">
+        <h1 id="score">Puntuación: 0</h1>
+        <div id="game-over" class="hidden">
+            <h2>¡Perdiste!</h2>
+            <button onclick="restartGame()">Reiniciar</button>
+        </div>
+        <div id="win" class="hidden">
+            <h2>¡Ganaste!</h2>
+            <button onclick="restartGame()">Reiniciar</button>
+        </div>
+    </div>
+
+    <!-- Nuevo cursor personalizado -->
+    <div id="custom-cursor"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>
